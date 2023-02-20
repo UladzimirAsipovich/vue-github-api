@@ -1,0 +1,17 @@
+@import './base.scss';
+
+body {
+  background-color: #0d1117;
+}
+
+.basic_page {
+  padding: 8rem 1rem;
+  margin-top: -5rem;
+  min-height: 1000px;
+}
+
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
+}

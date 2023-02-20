@@ -1,0 +1,30 @@
+import type {
+  T_INITIAL_DATA,
+  I_INITIAL_USER,
+  I_INITIAL_ISSUE,
+  I_INITIAL_REPO,
+  I_INITIAL_COMMENT,
+} from "../initialData.types";
+
+export type T_FOUND_USERS = T_INITIAL_DATA | [] | null | -1;
+export type T_SELECTED_USER = I_INITIAL_USER | null;
+export type T_SHOWING_REPOS = I_INITIAL_REPO[] | [] | null;
+export type T_SELECTED_REPO = I_INITIAL_REPO | null;
+export type T_SHOWING_ISSUES = I_INITIAL_ISSUE[] | [] | null;
+export type T_SELECTED_ISSUE = I_INITIAL_ISSUE | null;
+export type T_SHOWING_COMMENTS = I_INITIAL_COMMENT[] | [] | null;
+
+export interface I_RootState {
+  INITIAL_DATA: T_INITIAL_DATA;
+  IS_FETCHING: boolean;
+  _DEBOUNCE: boolean;
+  TEXT_ERROR: string;
+  FOUND_USERS: T_FOUND_USERS;
+  SELECTED_USER: T_SELECTED_USER;
+  SEARCH_STRING: string;
+  SHOWING_REPOS: T_SHOWING_REPOS;
+  SELECTED_REPO: T_SELECTED_REPO;
+  SHOWING_ISSUES: T_SHOWING_ISSUES;
+  SELECTED_ISSUE: T_SELECTED_ISSUE;
+  SHOWING_COMMENTS: T_SHOWING_COMMENTS;
+}
